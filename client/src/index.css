@@ -3,7 +3,7 @@
 /* ═══════════════════════════════════════════════════════════════════════
    DESIGN TOKENS
    ═══════════════════════════════════════════════════════════════════════ */
-:root, [data-theme="dark"] {
+:root {
   /* Colors — Dark theme */
   --bg-primary: #0B1120;
   --bg-secondary: #111827;
@@ -112,7 +112,14 @@
 *::before,
 *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 16px; scroll-behavior: smooth; }
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+[data-theme="light"] {
+  color-scheme: light;
+}
 
 body {
   font-family: var(--font-family);

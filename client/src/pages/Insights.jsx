@@ -166,7 +166,7 @@ export default function Insights() {
               <XAxis dataKey="month" tick={{ fill: '#64748b', fontSize: 12 }} axisLine={false} tickLine={false} />
               <YAxis tick={{ fill: '#64748b', fontSize: 12 }} axisLine={false} tickLine={false} />
               <Tooltip
-                contentStyle={{ background: '#1a1f35', border: '1px solid rgba(148,163,184,.15)', borderRadius: 8, color: '#f1f5f9' }}
+                contentStyle={{}}
                 formatter={(v) => formatCurrency(v)}
               />
               <Bar dataKey="expense" fill="#f87171" radius={[6, 6, 0, 0]} barSize={32} />
@@ -250,7 +250,7 @@ export default function Insights() {
                   <XAxis dataKey="month" tick={{ fill: '#64748b', fontSize: 11 }} axisLine={false} tickLine={false} label={{ value: 'Month', position: 'insideBottom', offset: -2, fill: '#64748b', fontSize: 11 }} />
                   <YAxis tick={{ fill: '#64748b', fontSize: 11 }} axisLine={false} tickLine={false} />
                   <Tooltip
-                    contentStyle={{ background: '#1a1f35', border: '1px solid rgba(148,163,184,.15)', borderRadius: 8, color: '#f1f5f9' }}
+                    contentStyle={{}}
                     formatter={(v) => formatCurrency(v)}
                   />
                   <Line type="monotone" dataKey="balance" stroke="#22d3ee" strokeWidth={2} dot={{ r: 3, fill: '#22d3ee' }} />
