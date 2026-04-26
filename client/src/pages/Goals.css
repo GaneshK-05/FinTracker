@@ -1,0 +1,139 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   GOALS PAGE
+   ═══════════════════════════════════════════════════════════════════════ */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  position: relative;
+}
+.goal-card.complete {
+  border-color: rgba(52, 211, 153, .25);
+}
+.goal-card.complete::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(52, 211, 153, .04);
+  border-radius: var(--radius-md);
+  pointer-events: none;
+}
+
+.goal-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--accent-success);
+  background: rgba(52, 211, 153, .12);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+
+.goal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.goal-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: rgba(99, 102, 241, .1);
+  color: var(--accent-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.goal-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+.goal-card:hover .goal-actions {
+  opacity: 1;
+}
+
+.goal-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.goal-amounts {
+  margin-bottom: 12px;
+}
+.goal-current {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--accent-primary-light);
+}
+.goal-target {
+  font-size: .85rem;
+  color: var(--text-muted);
+  margin-left: 4px;
+}
+
+.goal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: .78rem;
+}
+.goal-progress-text {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.goal-deadline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-muted);
+}
+
+/* ── Add Savings Modal ── */
+.add-savings-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-color);
+}
+.add-savings-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background: rgba(99, 102, 241, .1);
+  color: var(--accent-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.add-savings-goal-name {
+  font-size: .95rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.add-savings-progress {
+  font-size: .78rem;
+  color: var(--text-muted);
+}
